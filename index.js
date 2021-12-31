@@ -105,4 +105,8 @@ function skyImage(leftPixel, topPixel) {
 
 for (let i = 0; i <= 2000; i = i + 100) {
     skyImage(i + 'px', '0px')
+    skyImage(i + 'px', '100px')
+    skyImage(i + 'px', '200px')
+    skyImage(i + 'px', '300px')
+    skyImage(i + 'px', '350px')
 }
