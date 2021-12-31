@@ -68,7 +68,7 @@ function newItem(imgSource, leftPixel, bottomPixel) {
     newElement.style.bottom = bottomPixel;
     document.body.append(newElement);
     
-    newElement.addEventListener('click', function(){
+    newElement.addEventListener('dblclick', function(){
         newElement.remove()
     })
 
@@ -77,3 +77,32 @@ function newItem(imgSource, leftPixel, bottomPixel) {
 newItem('assets/sword.png', '500px', '405px')
 newItem('assets/shield.png', '165px', '185px')
 newItem('assets/staff.png', '600px', '100px')
+
+
+
+// *** ADDING BACKGROUND IMAGES ***
+
+// let sky = document.createElement('img')
+// sky.src = 'assets/sky.png'
+// sky.style.position = 'fixed'
+// sky.style.left = '500px'
+// sky.style.bottom = '405px'
+// sky.style.zIndex = '-1'
+// document.body.append(sky)
+
+function skyImage(leftPixel, topPixel) {
+    let sky = document.createElement('img');
+    sky.src = 'assets/sky.png';
+    sky.style.position = 'fixed';
+    sky.style.zIndex = '-1'
+    sky.style.left = leftPixel;
+    sky.style.top = topPixel;
+    document.body.append(sky);
+    return sky;
+}
+
+// skyImage('0px', '0px')
+
+for (let i = 0; i <= 2000; i = i + 100) {
+    skyImage(i + 'px', '0px')
+}
