@@ -103,7 +103,7 @@ function skyImage(leftPixel, topPixel) {
 
 // skyImage('0px', '0px')
 
-for (let i = 0; i <= 2000; i = i + 100) {
+for (let i = 0; i <= window.innerWidth; i = i + 100) {
     skyImage(i + 'px', '0px')
     skyImage(i + 'px', '100px')
     skyImage(i + 'px', '200px')
@@ -116,14 +116,14 @@ function grassImage(leftPixel, topPixel) {
     let grass = document.createElement('img');
     grass.src = 'assets/grass.png';
     grass.style.position = 'fixed';
-    grass.style.zIndex = '-2'
+    grass.style.zIndex = '-1'
     grass.style.left = leftPixel;
     grass.style.top = topPixel;
     document.body.append(grass);
     return grass;
 }
 
-for (let i = 0; i <= 2000; i = i + 100) {
+for (let i = 0; i <= window.innerWidth; i = i + 100) {
     grassImage(i + 'px', '450px')
     grassImage(i + 'px', '550px')
     grassImage(i + 'px', '650px')
