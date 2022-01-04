@@ -130,3 +130,7 @@ for (let i = 0; i <= window.innerWidth; i = i + 100) {
     grassImage(i + 'px', '750px')
     grassImage(i + 'px', '850px')
 }
+
+// let horizon = window.innerHeight/1.75;
+// let heighOfSky = window.innerHeight - horizon;
+// let heightOfGrass = horizon;
